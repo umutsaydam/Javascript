@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Resize</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <button><img class="icon" src="Img/plus.png" alt="" onclick="buyult()"></button>
+    <button><img class="icon" src="Img/minus.png" alt="" onclick="kucult()"></button>
+    
+    <div class="content">
+        <div class="text" >
+            <p id="font">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus justo eget molestie dignissim.
+                Mauris elementum, neque nec ultrices venenatis, urna massa aliquam nisi, quis tincidunt orci metus vel
+                turpis. Curabitur pellentesque in ligula eget cursus. Donec eget mauris in justo dictum lobortis. Cras a
+                posuere velit. Morbi sit amet risus pharetra, dictum sem non, malesuada metus. Suspendisse eu sem odio.
+                Nullam vestibulum mi et urna vulputate, a mattis dolor semper. Praesent tristique pellentesque ligula,
+                at volutpat erat ullamcorper id. Ut ornare eros ac ligula laoreet rhoncus. Quisque pharetra metus vitae
+                ullamcorper pellentesque. Duis condimentum purus tellus, in luctus tortor lacinia vel. Nulla iaculis
+                massa ut risus tristique, fringilla consectetur est iaculis. Cras vel tortor id massa fringilla dapibus.
+                <br><br>
+                Suspendisse potenti. Nam vehicula sem vel porta pharetra. Cras efficitur massa non velit varius, quis
+                mattis mi dignissim. Sed eget arcu ut ante molestie consectetur. Vestibulum vehicula, odio nec accumsan
+                blandit, ante tellus vehicula tortor, a viverra tellus lacus eu tortor. Fusce leo sem, congue ac blandit
+                at, viverra id est. Etiam aliquet aliquet libero et vulputate. Mauris laoreet eleifend porttitor. Proin
+                sed ornare dui. Integer vehicula imperdiet lectus, quis rhoncus urna eleifend sit amet. In gravida
+                ornare vulputate. Proin eget fermentum quam. Quisque sit amet velit a sapien congue consectetur.
+                Praesent viverra imperdiet mattis. In volutpat ipsum neque, ac luctus mauris sollicitudin quis.
+
+
+            </p>
+        </div>
+    </div>
+    <script>
+        var size = 16;
+
+        function buyult(){
+            if (size < 26) {
+                size = size + 2;
+                document.getElementById("font").style.fontSize = size + "px";
+            }
+        }
+
+        function kucult(){
+            if (size > 12) {
+                size = size - 2;
+                document.getElementById("font").style.fontSize = size + "px";
+            }
+        }
+    </script>
+</body>
+
+</html>

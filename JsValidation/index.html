@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="" id="form">
+            <h2>Kayıt Ol</h2>
+            <div class="form-panel">
+                <label for="username">Kullanıcı Adınız</label>
+                <input type="text" name="" id="username" placeholder="Kullanıcı Adınız">
+                <small></small>
+            </div>
+
+            <div class="form-panel">
+                <label for="email">E-mail</label>
+                <input type="email" name="" id="email" placeholder="E-mail adresiniz">
+                <small></small>
+            </div>
+
+            <div class="form-panel">
+                <label for="password">Şifre</label>
+                <input type="password" name="" id="password" placeholder="Şifreniz">
+                <small></small>
+            </div>
+
+            <div class="form-panel">
+                <label for="password">Şifre Tekrar</label>
+                <input type="password" name="" id="password2" placeholder="Şifreniz">
+                <small></small>
+            </div>
+        </form>
+
+        <div class="btn-kayit">
+            <input type="button" value="Kayıt Ol" onclick="tik();">
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById("form");
+        const userName = document.getElementById("username");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const password2 = document.getElementById("password2");
+
+        function error(input,message) {
+            const formControl = input.parentElement;
+            const small = formControl.querySelector("small");
+            small.innerText = message;
+        }
+
+        function success(input) {
+
+        }
+
+        function checkUserName(input) {
+            if (input.value == "") {
+                error(userName,"Alan boş bırakılmamalı.");
+            }else if (input.value.length < 5) {
+                error(userName,"Karakter sayısı 5'ten fazla olmalı");
+            } else {
+                success(userName);
+            }
+        }
+
+        function checkEmail(input) {
+            var re = /\S+@\S+\.\S+/;
+
+            if (!re.test(input.value)) {
+                error(email,"Geçerli bir e-mail giriniz.");
+            }else{
+                success(email);
+            }
+        }
+
+        function passwordCheck(input1,input2) {
+           if (input1.value=="" || input2.value=="") {
+               error(input2,"Alan boş bırakılmamalı.");
+           }else if (input1.value!=input2.value) {
+                error(input2,"Şifreler aynı olmalı.");
+            }else{
+                success();
+            }
+        }
+
+        function tik() {
+            checkUserName(userName);
+            checkEmail(email);
+            passwordCheck(password,password2);
+        }
+
+    </script>
+</body>
+
+</html>

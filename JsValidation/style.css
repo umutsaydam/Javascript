@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+
+ .container{
+    width: 350px;
+    min-height: 450px;
+    border-radius: 5px;
+    padding: 30px 70px;
+    background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.38); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.38);
+ }
+
+ .container h2{
+     text-align: center;
+     color: rgba(0, 0, 0, 0.699);
+     margin-bottom: 9px;
+ }
+
+ .form-panel {
+     padding: 10px;
+ }
+
+ .form-panel input {
+    display: block;
+    width: 190px;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid #4b6cb7;
+    border-radius: 4px;
+}
+
+ .form-panel label{
+    display: block;
+    font-weight: bold;
+    padding-bottom: 8px;
+ }
+
+ .container .btn-kayit{
+     width: 50px;
+     height: 30px;
+     padding: 0 99px 0 0;
+     float: right;
+ }
+
+ .btn-kayit input{
+    width: 90px;
+    height: 40px;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid #4b6cb7;
+    border-radius: 4px;
+    transition: all 0.7s;
+ }
+
+ .btn-kayit input:hover{
+     background-color: #4b6cb7;
+     color: #fff;
+ }
+
+ .error{
+     color: yellow;
+ }

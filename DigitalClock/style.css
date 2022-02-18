@@ -1,0 +1,71 @@
+/*
+background: linear-gradient(45deg, #1870ed 0, #f18f88 100%)
+frame of clock: #080808 723x 208
+numbers 93x88 rgba(255, 255, 255, 0.35)
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+   font-family: 'Roboto', sans-serif;
+   cursor: default;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(45deg, #1870ed 0, #f18f88 100%);
+}
+
+.container{
+    width: 60%;
+    height: 220px;
+    display: flex;
+    background-color: #0d0b0b;
+    color:#fff; 
+    border-radius: 5px;
+    padding: 60px 20px;
+    box-shadow: 1px 1px 5px rgb(255 255 255 / 15%), 0 15px 90px 30px rgb(0 0 0 / 25%);
+}
+
+.clock-box{
+    width: 93px;
+    height: 88px;
+    padding: 0 60px;
+}
+
+.clock-time{
+    height: 30px;
+    font-size: 4.2em;
+    text-align: center;
+    text-shadow: 6px 5px rgb(0 0 0 / 80%);
+}
+
+.shape{
+    width: 50px;
+    height: 80px;
+}
+
+.shape i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 12px;
+    padding: 10px 0;
+    position: relative;
+    top: 100%;
+}
+
+.clock-name{
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.35);
+}
